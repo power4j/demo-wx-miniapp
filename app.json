@@ -1,6 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/account/binding/index",
+    "pages/account/login/index",
+    "pages/account/user/index",
     "pages/logs/logs"
   ],
   "window":{

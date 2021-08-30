@@ -17,7 +17,16 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="content">
+    <block>
+      <button type="primary" plain="true" bindtap="userInfo" >Word很大</button>
+      <text>这个按钮打开一个需要登录才能访问的页面</text>
+    </block>
+  </view>
+  <view class="footer">
+    <text>https://gitee.com/power4j</text>
+    <block>
+        <text>https://github.com/power4j</text>
+    </block>
   </view>
 </view>

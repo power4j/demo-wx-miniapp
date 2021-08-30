@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <textarea bindblur="bindTextAreaBlur" auto-height="true" maxlength="1024" placeholder="这里显示个人信息" value="{{userInfo}}"/>
+  </view>
+  <view class="footer">
+    <button type="warn" plain="true" bindtap="onLogout">退出</button>
+  </view>
+</view>

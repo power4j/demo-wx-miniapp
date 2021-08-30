@@ -4,7 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -17,14 +16,26 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad() {
-    const scene = decodeURIComponent(query.scene)
-    console.log(scene)
+  onLoad(query) {
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
+    if(query){
+      console.log(`query = ${query}`)
+      const param = (decodeURIComponent(query.scene) || '@').split('@',2)
+      if(param[0] && param[0] == 'bind'){
+        wx.navigateTo({
+          url: `../account/binding/index?uid=${param[1]}`
+        })
+      }
+    }
+  },
+  userInfo(e) {
+    wx.navigateTo({
+      url: '../account/user/index'
+    })
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗

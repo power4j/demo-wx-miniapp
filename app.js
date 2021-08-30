@@ -14,6 +14,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    request: {
+      baseUrl: 'http://127.0.0.1:18081/api'
+    },
+    accessToken: null
   }
 })

@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "扫码绑定账号",
+          "pathName": "pages/index/index",
+          "query": "scene=2000",
+          "scene": null
+        },
+        {
+          "name": "账号绑定页面",
+          "pathName": "pages/account/binding/index",
+          "query": "uid=2000",
+          "scene": null
+        },
+        {
+          "name": "登录页面",
+          "pathName": "pages/account/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户信息",
+          "pathName": "pages/account/user/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

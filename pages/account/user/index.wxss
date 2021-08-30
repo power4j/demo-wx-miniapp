@@ -14,20 +14,14 @@
   border-radius: 50%;
 }
 
-.content {
-  margin-top: 50px;
+.usermotto {
+  margin-top: 200px;
+}
+
+.footer {
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #aaa;
-  font-size: x-small;
-}
-
-.footer {
-  margin-top: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  color: #aaa;
-  font-size: x-small;
 }

@@ -1,0 +1,15 @@
+/**index.wxss**/
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.button-hover {
+  background-color: red;
+}
+.other-button-hover {
+  background-color: blue;
+}
+button {margin: 10px;}

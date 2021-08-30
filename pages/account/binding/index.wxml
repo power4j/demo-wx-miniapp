@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view><icon type="info" size = "64"></icon></view>
+    <view>
+      <view>正在进行账号绑定({{uid}})</view>
+      <view></view>
+    </view>
+  </view>
+  <view class="usermotto">
+    <button type="default" size="{{defaultSize}}" loading="{{binding}}"
+        disabled="{{!uid}}" bindtap="bindUid" hover-class="other-button-hover"> 确认 </button>
+  </view>
+</view>
