@@ -18,27 +18,31 @@
 
 ## 相关功能截图
 
-![qr-bind-img](http://picdn.eta.pub/img/qr-bind-img.png)
+---
 
-
-
-![ui-main](docs/screen/index.png)
-
+![qr-bind-img](http://picdn.eta.pub/img/qr-bind-img.jpg)
 
 
 
 
-![login](http://picdn.eta.pub/img/login.png)
 
+---
 
+![login](http://picdn.eta.pub/img/login.jpg)
 
-![acc-bind-complete](http://picdn.eta.pub/img/acc-bind-complete.png)
+---
 
-![login-scuccess](http://picdn.eta.pub/img/login-scuccess.png)
+![acc-bind-complete](http://picdn.eta.pub/img/acc-bind-complete.jpg)
 
+---
 
+![login-scuccess](http://picdn.eta.pub/img/login-scuccess.jpg)
 
-![user-info](http://picdn.eta.pub/img/user-info.png)
+---
+
+![user-info](http://picdn.eta.pub/img/user-info.jpg)
+
+---
 
 
 
