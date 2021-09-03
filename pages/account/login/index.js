@@ -16,6 +16,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
+            timeout: 2000,
             method: 'POST',
             url: app.globalData.request.baseUrl + '/social/login',
             data: {
@@ -44,7 +45,7 @@ Page({
               console.log(err)
               wx.showModal({
                 title: '提示',
-                content: '网络请求失败 ' + err
+                content: '网络请求失败 ' + err.errMsg
               })
             }
           })

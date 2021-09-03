@@ -25,6 +25,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
+            timeout: 2000,
             method: 'POST',
             url: app.globalData.request.baseUrl + '/social/wx-mini/connect',
             data: {
@@ -36,7 +37,10 @@ Page({
               if(0 !== res.data.code){
                 wx.showModal({
                   title: '提示',
-                  content: res.data.code + ' - ' + res.data.msg
+                  content: res.data.code + ' - ' + res.data.msg,
+                  complete() {
+                    wx.redirectTo({url: '../login/index'})
+                  }
                 })
               }else{
                 wx.showModal({
@@ -49,10 +53,10 @@ Page({
               }
             },
             fail (err) {
-              console.log(err)
+              console.log('request error ',err)
               wx.showModal({
                 title: '提示',
-                content: '网络请求失败 ' + err
+                content: '网络请求失败 ' + err.errMsg
               })
             }
           })

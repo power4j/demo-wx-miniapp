@@ -18,7 +18,7 @@
 
 ## 相关功能截图
 
-![qr-bind-swagger](http://picdn.eta.pub/img/qr-bind-swagger.png)
+![qr-bind-img](http://picdn.eta.pub/img/qr-bind-img.png)
 
 
 

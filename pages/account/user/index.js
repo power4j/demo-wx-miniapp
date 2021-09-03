@@ -25,11 +25,12 @@ Page({
     const uid = page.getUid()
     console.log(`token = ${token}`)
     wx.request({
+      timeout: 2000,
       method: 'GET',
       header: {
         'x-api-token': token
       },
-      url: `${app.globalData.request.baseUrl}/sys/users/${uid}`,
+      url: app.globalData.request.baseUrl+`/sys/users/${uid}`,
       success (res) {
         console.log(res)
         if(res.statusCode === 200 && res.data.code === 0){
@@ -59,7 +60,7 @@ Page({
     })
   },
   // 事件处理函数
-  onLoad(query) {
+  onShow(query) {
     if(this.getApiToken()){
       this.loadUserInfo()
     }else{
@@ -69,13 +70,25 @@ Page({
     }
   },
   onLogout(query) {
+    const token = this.getApiToken()
     wx.showModal({
       title: '退出登录',
       success (res) {
         if (res.confirm) {
           console.log('delete api token')
-          wx.setStorageSync('apiToken', null)
-          wx.redirectTo({url: '../login/index'})
+          wx.request({
+            timeout: 2000,
+            method: 'POST',
+            header: {
+              'x-api-token': token
+            },
+            url: `${app.globalData.request.baseUrl}/logout`,
+            success (res) {
+              console.log(res)
+              wx.setStorageSync('apiToken', null)
+              wx.redirectTo({url: '../login/index'})
+            }
+          })
         }
       }
     })

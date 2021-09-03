@@ -5,18 +5,13 @@ App({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
   },
   globalData: {
     userInfo: null,
     request: {
-      baseUrl: 'http://127.0.0.1:18081/api'
+      // TODO: 换成你自己的服务器IP
+      //baseUrl: 'http://127.0.0.1:18081/api'
+      baseUrl: 'http://ji-boot-demo.etcd.ltd/api'
     },
     accessToken: null
   }
