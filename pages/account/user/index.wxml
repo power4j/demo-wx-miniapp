@@ -4,6 +4,7 @@
     <textarea bindblur="bindTextAreaBlur" auto-height="true" maxlength="1024" placeholder="这里显示个人信息" value="{{userInfo}}"/>
   </view>
   <view class="footer">
-    <button type="warn" plain="true" bindtap="onLogout">退出</button>
+    <button type="warn" plain="true" bindtap="onAccDisconnect">解除账号绑定</button>
+    <button type="info" plain="true" bindtap="onLogout">退出</button>
   </view>
 </view>

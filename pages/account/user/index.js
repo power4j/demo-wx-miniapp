@@ -92,5 +92,26 @@ Page({
         }
       }
     })
+  },
+  onAccDisconnect(){
+    const token = this.getApiToken()
+    wx.showModal({
+      title: '解除账号绑定',
+      success (res) {
+        if (res.confirm) {
+          wx.request({
+            timeout: 2000,
+            method: 'DELETE',
+            header: {
+              'x-api-token': token
+            },
+            url: `${app.globalData.request.baseUrl}/wx-mini/user/binging`,
+            success () {
+              wx.redirectTo({url: '../login/index'})
+            }
+          })
+        }
+      }
+    })
   }
 })
