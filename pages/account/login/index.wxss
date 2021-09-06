@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .info-box {
   display: flex;
   flex-direction: column;
@@ -12,4 +13,11 @@
 .other-button-hover {
   background-color: blue;
 }
-button {margin: 10px;}
+
+.button-box {
+  margin-bottom: 20px; 
+  position: absolute;
+  bottom: 10px;
+}
+
+.button-box button {margin: 10px;}

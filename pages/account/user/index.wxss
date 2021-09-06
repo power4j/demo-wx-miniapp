@@ -1,27 +1,23 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+@import "../../../static/css/weui.wxss";
+
+.container {
+  width: 100%;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.page-body {
+  padding: 20rpx 0;
 }
 
-.usermotto {
-  margin-top: 200px;
+.form-section{
+  margin-bottom: 15rpx;
 }
 
-.footer {
-  margin-top: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+.button-box {
+  margin-bottom: 20px; 
+  position: absolute;
+  bottom: 10px;
+}
+
+.button-box button {
+  margin: 10px;
 }

@@ -4,10 +4,9 @@
     <view><icon type="info" size = "64"></icon></view>
     <view>
       <view>使用微信账号登录</view>
-      <view></view>
     </view>
   </view>
-  <view>
+  <view class="button-box">
     <button type="primary" plain="true" bindtap="login"> 已经绑定,直接登录 </button>
     <button type="warn" plain="true" bindtap="onBindingQrCode"> 假装账号绑定二维码扫描成功 </button>
   </view>

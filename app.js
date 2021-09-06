@@ -10,8 +10,8 @@ App({
     userInfo: null,
     request: {
       // TODO: 换成你自己的服务器IP
-      //baseUrl: 'http://127.0.0.1:18081/api'
-      baseUrl: 'http://ji-boot-demo.etcd.ltd/api'
+      baseUrl: 'http://127.0.0.1:18081/api'
+      //baseUrl: 'http://ji-boot-demo.etcd.ltd/api'
     },
     accessToken: null
   }

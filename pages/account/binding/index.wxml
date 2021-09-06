@@ -2,13 +2,12 @@
 <view class="container">
   <view class="userinfo">
     <view><icon type="info" size = "64"></icon></view>
-    <view>
-      <view>正在进行账号绑定({{uid}})</view>
-      <view></view>
+    <view style="margin-top: 30px;">
+      <view>正在进行账号绑定: {{uid}}</view>
     </view>
   </view>
-  <view class="usermotto">
-    <button type="default" size="{{defaultSize}}" loading="{{binding}}"
+  <view class="button-box">
+    <button type="primary" plain="true" loading="{{binding}}"
         disabled="{{!uid}}" bindtap="bindUid" hover-class="other-button-hover"> 确认 </button>
   </view>
 </view>

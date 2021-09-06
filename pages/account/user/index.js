@@ -34,7 +34,8 @@ Page({
       success (res) {
         console.log(res)
         if(res.statusCode === 200 && res.data.code === 0){
-          page.setData({userInfo: JSON.stringify(res.data.data)})
+          //page.setData({userInfo: JSON.stringify(res.data.data)})
+          page.setData({userInfo: res.data.data})
         }else if(res.statusCode === 401 || res.statusCode === 403){
           wx.showModal({
             title: '登录会话已过期,请重新登录',
@@ -107,6 +108,7 @@ Page({
             },
             url: `${app.globalData.request.baseUrl}/wx-mini/user/binging`,
             success () {
+              wx.setStorageSync('apiToken', null)
               wx.redirectTo({url: '../login/index'})
             }
           })
